@@ -1,3 +1,4 @@
+<%@page import="java.net.URLEncoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("UTF-8");%>
@@ -17,7 +18,13 @@
 		<input type="text" name="name" value="<%=request.getParameter("name")%>">
 		<button>전송</button>
 	</form>--%>
+	<%
+		String name = request.getParameter("name");
+		
+	%>
 	
-	<%response.sendRedirect("request_test.jsp?name=김헌찬");%>
+	<%response.sendRedirect("request_test.jsp?name="+ URLEncoder.encode(name, "UTF-8"));%>
+	
+	
 </body>
 </html>
