@@ -45,9 +45,11 @@
 			<input type="text" name="address_etc" class="postcodify_extra_info" value="" /><br />
 			</label>
 		</p>
+		<input type="button" onclick="join()" value="회원가입완료">
 	</form>
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
 <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script>
+<script src="member.js"></script>
 </html>
