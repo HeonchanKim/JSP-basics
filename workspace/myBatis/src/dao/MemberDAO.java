@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -35,8 +36,28 @@ public class MemberDAO {
 		
 		return (Integer)(sqlSession.selectOne("Member.login", loginMap)) == 1;
 	}
-	//아이디 조회
-	//나이 조희
 	
+	//정보 수정
+	public boolean update(MemberVO member) {
+		return sqlSession.update("Member.modify", member) == 1;
+	}
+	
+	//회원 탈퇴
+	public boolean delete(String id) {
+		return sqlSession.delete("Member.remove", id) == 1;
+	}
+	
+	//아이디 조회(이름과 비밀번호)
+	public String findId(String name, String pw) {
+		HashMap<String, String> findIdMap = new HashMap<>();
+		findIdMap.put("name", name);
+		findIdMap.put("pw", pw);
+		return sqlSession.selectOne("Member.findId", findIdMap);
+	}
+	
+	//나이 조희(20살이 아닌 고객)
+	public List<MemberVO> findMember() {
+		return sqlSession.selectList("Member.findMember");
+	}
 	
 }
