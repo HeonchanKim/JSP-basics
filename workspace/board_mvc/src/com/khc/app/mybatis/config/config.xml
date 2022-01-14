@@ -3,6 +3,7 @@
 
 <configuration>
 	<typeAliases>
+		<typeAlias type="com.khc.app.member.vo.MemberVO" alias="member"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
