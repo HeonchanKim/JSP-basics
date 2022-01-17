@@ -70,28 +70,86 @@
 												<input type="checkbox" id="term1" name="term1" class="terms">
 												<label for="term1">서비스 이용약관</label>
 											</div>
-											<div>
+											<div class="term-detail">
 												<a href="term1-content">펼쳐보기</a>
 											</div>
-											<textarea name="term1-content" id="term1-content" rows="3" style="display:none"></textarea>
 										</div>
+										<textarea name="term1-content" id="term1-content" rows="3" style="display:none"></textarea>
+										<br>
 										<div class="col-12" style="display:flex; justify-content:space-between;">
 											<div>
 												<input type="checkbox" id="term2" name="term2" class="terms">
 												<label for="term2">개인정보 수집 및 이용</label>
 											</div>
-											<div>
+											<div class="term-detail">
 												<a href="term2-content">펼쳐보기</a>
 											</div>
-											<textarea name="term2-content" id="term2-content" rows="3" style="display:none"></textarea>
 										</div>
+										<textarea name="term2-content" id="term2-content" rows="3" style="display:none"></textarea>
 										<br>
 									</div>
 								</div>
 								<hr>
-								
+								<p style="background:#3a6afd2e">
+									아래 항목은 선택사항입니다.
+								</p>
+								<p style="margin:0;">성별</p>
+								<div class="col-4 col-12-small">
+									<input type="radio" id="male" name="memberGender" value="남자">
+									<label for="male">남자</label>
+									<input type="radio" id="female" name="memberGender" value="여자">
+									<label for="female">여자</label>
+									<input type="radio" id="none" name="memberGender" value="선택안함" checked>
+									<label for="none">선택안함</label>
+								</div>
+								<p style="margin:0">이메일</p>
+								<input type="text" name="memberEmail" id="memberEmail" value="">
+								<br>
+								<p style="margin:0;">우편번호</p>
+								<div style="display:flex; justify-content:space-between;">
+									<input type="text" name="memberZipcode" class="postcodify_postcode5" value="">
+									<ul class="actions">
+										<li>
+											<input type="button" id="postcodify_search_button" class="button primary" style="boder-radius:0;" value="검색">
+										</li>
+									</ul>
+								</div>
+								<p style="margin:0">주소</p>
+								<input type="text" name="memberAddress" id="memberAddress" class="postcodify_address" value="">
+								<br>
+								<p style="margin:0">상세주소</p>
+								<input type="text" name="memberAddressDetail" id="memberAddressDetail" class="postcodify_details" value="">
+								<br>
+								<p style="margin:0">참고항목</p>
+								<input type="text" name="memberAddressEtc" id="memberAddressEtc" class="postcodify_extra_info" value="">
+								<br>
+								<div class="col-12" style="margin-top:8%;">
+									<ul class="actions" style="display:flex; justify-content:center;">
+										<li>
+											<input type="button" value="완료" class="primary" onclick="formSubmit()">
+										</li>
+										<li>
+											<input type="button" value="취소" class="primary" onclick="history.back()">
+										</li>
+									</ul>
+								</div>
 							</div>
-							<div style="width:40%;"></div>
+							<div class="preview" style="width:40%;">
+								<div>
+									<h4>광고1</h4>
+									<img src="${pageContext.request.contextPath}/images/ex01.png">
+								</div>
+								<hr>
+								<div>
+									<h4>광고2</h4>
+									<img src="${pageContext.request.contextPath}/images/ex02.png">
+								</div>
+								<hr>
+								<div>
+									<h4>광고3</h4>
+									<img src="${pageContext.request.contextPath}/images/ex03.png">
+								</div>
+							</div>
 						</div>
 					</form>
 				</section>
@@ -105,4 +163,8 @@
 <script src="${pageContext.request.contextPath}/assets/js/breakpoints.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/util.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
+<script>var contextPath = "${pageContext.request.contextPath}"</script>
+<script src="${pageContext.request.contextPath}/app/member/join.js"></script>
+<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
+<script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script>
 </html>
