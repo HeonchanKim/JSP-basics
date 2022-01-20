@@ -18,6 +18,6 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="com/khc/mybatis/sql/member.xml"/>
+		<mapper resource="com/khc/app/mybatis/sql/member.xml"/>
 	</mappers>
 </configuration>

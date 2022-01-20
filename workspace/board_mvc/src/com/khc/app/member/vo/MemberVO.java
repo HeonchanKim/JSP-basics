@@ -7,9 +7,9 @@ public class MemberVO {
 	private String memberGender;
 	private String memberEmail;
 	private String memberZipcode;
-	private String memberAdress;
-	private String memberAdressDetail;
-	private String memberAdressEtc;
+	private String memberAddress;
+	private String memberAddressDetail;
+	private String memberAddressEtc;
 	
 	public MemberVO() {}
 
@@ -61,27 +61,27 @@ public class MemberVO {
 		this.memberZipcode = memberZipcode;
 	}
 
-	public String getMemberAdress() {
-		return memberAdress;
+	public String getMemberAddress() {
+		return memberAddress;
 	}
 
-	public void setMemberAdress(String memberAdress) {
-		this.memberAdress = memberAdress;
+	public void setMemberAddress(String memberAddress) {
+		this.memberAddress = memberAddress;
 	}
 
-	public String getMemberAdressDetail() {
-		return memberAdressDetail;
+	public String getMemberAddressDetail() {
+		return memberAddressDetail;
 	}
 
-	public void setMemberAdressDetail(String memberAdressDetail) {
-		this.memberAdressDetail = memberAdressDetail;
+	public void setMemberAddressDetail(String memberAddressDetail) {
+		this.memberAddressDetail = memberAddressDetail;
 	}
 
-	public String getMemberAdressEtc() {
-		return memberAdressEtc;
+	public String getMemberAddressEtc() {
+		return memberAddressEtc;
 	}
 
-	public void setMemberAdressEtc(String memberAdressEtc) {
-		this.memberAdressEtc = memberAdressEtc;
+	public void setMemberAddressEtc(String memberAddressEtc) {
+		this.memberAddressEtc = memberAddressEtc;
 	}
 }

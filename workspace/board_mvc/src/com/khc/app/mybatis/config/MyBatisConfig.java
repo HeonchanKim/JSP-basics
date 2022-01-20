@@ -13,7 +13,7 @@ public class MyBatisConfig {
 	
 	static {
 		try {
-			String resource = "./com/khc/app/mybatis/cofig/config.xml";
+			String resource = "./com/khc/app/mybatis/config/config.xml";
 			Reader reader = Resources.getResourceAsReader(resource);
 			
 			sqlsession_f = new SqlSessionFactoryBuilder().build(reader);

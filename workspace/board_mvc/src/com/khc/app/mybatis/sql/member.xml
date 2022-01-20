@@ -3,7 +3,7 @@
 
 <mapper namespace="Member">
 	<select id="checkId" parameterType="string" resultType="_int">
-		SELECT COUNT(ID) FROM TBL_MEMBER
+		SELECT COUNT(memberId) FROM TBL_MEMBER
 		WHERE memberId = #{memberId}
 	</select>
 	
